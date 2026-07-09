@@ -10,24 +10,27 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER.replace("+", "")}?t
 export const CONTACT_PHONE = "+91 99999 99999";
 export const CONTACT_EMAIL = "hello@pawltier.in";
 
-export const CUSTOMER_MINDSETS = [
+export const WEDDING_PROMISES = [
   {
     id: "family",
     emoji: "💛",
-    feeling: "My pet is an important member of our family.",
-    desire: "I want my pet to join the ceremony.",
+    title: "Part of the Family",
+    quote: "My pet is an important member of our family.",
+    promise: "Your pet joins the ceremony — as ring bearer, honoured guest, or by your side when you say \"I do.\"",
   },
   {
     id: "peace",
     emoji: "🕊️",
-    feeling: "I don't want extra stress on my wedding day.",
-    desire: "I want peace of mind throughout the day.",
+    title: "Peace of Mind",
+    quote: "I don't want extra stress on my wedding day.",
+    promise: "We handle walks, crowd moments, and quiet breaks so you stay fully present from vows to reception.",
   },
   {
     id: "celebration",
     emoji: "🥂",
-    feeling: "Our venue allows pets during the wedding.",
-    desire: "I want everyone to enjoy the celebration.",
+    title: "Joy for Everyone",
+    quote: "Our venue allows pets during the wedding.",
+    promise: "Whether on-site or nearby, every guest — furry ones included — enjoys a calm, memorable celebration.",
   },
 ] as const;
 
@@ -259,10 +262,10 @@ export const VIDEOS = [
     title: "See Pawltier in Action",
     description:
       "Watch how we bring pets into wedding celebrations — calm, cared for, and part of the family story.",
-    duration: "1:48",
+    duration: "0:22",
     category: "Brand Story",
     emoji: "🎬",
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
+    src: "/videos/home-hero.mp4",
     poster: "",
   },
   {
