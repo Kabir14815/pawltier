@@ -1,0 +1,308 @@
+"use client";
+
+import { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaCheckCircle,
+} from "react-icons/fa";
+import { CONTACT_EMAIL, CONTACT_PHONE, WHATSAPP_URL } from "@/lib/constants";
+import { ContactFormData } from "@/types";
+
+const initialForm: ContactFormData = {
+  name: "",
+  phone: "",
+  message: "",
+};
+
+export default function ContactSection({ hideHeader = false }: { hideHeader?: boolean }) {
+  const ref = useRef<HTMLElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  const [form, setForm] = useState<ContactFormData>(initialForm);
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
+
+  const validate = () => {
+    const errs: Partial<ContactFormData> = {};
+    if (!form.name.trim()) errs.name = "Name is required";
+    if (!form.phone.trim()) errs.phone = "Phone is required";
+    if (!form.message.trim()) errs.message = "Message is required";
+    return errs;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const errs = validate();
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      return;
+    }
+    setSubmitting(true);
+    await new Promise((r) => setTimeout(r, 1200));
+    setSubmitting(false);
+    setSubmitted(true);
+  };
+
+  return (
+    <section
+      id="contact"
+      ref={ref}
+      className="section-padding gradient-hero relative overflow-hidden"
+    >
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#FF6B35] rounded-full opacity-[0.05] blur-3xl" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative">
+        {!hideHeader && (
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-orange-100 shadow-sm mb-4">
+            <span className="text-xl">📬</span>
+            <span className="text-base font-semibold text-[#FF6B35]">
+              Get In Touch
+            </span>
+          </div>
+          <h2
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] mb-4"
+            style={{ fontFamily: "var(--font-nunito)" }}
+          >
+            Contact{" "}
+            <span className="text-gradient-orange">Us</span>
+          </h2>
+          <p className="text-xl text-[#4A4A6A] max-w-xl mx-auto">
+            Have questions or need a custom plan? We'd love to hear from you.
+          </p>
+        </motion.div>
+        )}
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col gap-6 split-content"
+          >
+            <div>
+              <h3
+                className="text-3xl font-bold text-[#1A1A2E] mb-2"
+                style={{ fontFamily: "var(--font-nunito)" }}
+              >
+                We're Here to Help 🐾
+              </h3>
+              <p className="text-[#4A4A6A]">
+                Our team is available 9 AM – 9 PM, 7 days a week. Reach out via any channel below.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              {[
+                {
+                  icon: FaPhone,
+                  label: "Phone",
+                  value: CONTACT_PHONE,
+                  color: "#FF6B35",
+                  href: `tel:${CONTACT_PHONE}`,
+                },
+                {
+                  icon: FaEnvelope,
+                  label: "Email",
+                  value: CONTACT_EMAIL,
+                  color: "#4A90D9",
+                  href: `mailto:${CONTACT_EMAIL}`,
+                },
+                {
+                  icon: FaMapMarkerAlt,
+                  label: "Location",
+                  value: "Mumbai, Maharashtra, India",
+                  color: "#E53E3E",
+                  href: null,
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200"
+                >
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: `${item.color}15` }}
+                  >
+                    <item.icon
+                      className="text-xl"
+                      style={{ color: item.color }}
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm text-[#8888AA] font-medium uppercase tracking-wider">
+                      {item.label}
+                    </p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-[#1A1A2E] font-semibold hover:text-[#FF6B35] transition-colors duration-200"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-[#1A1A2E] font-semibold">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* WhatsApp button */}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 py-4 rounded-2xl bg-[#25D366] text-white font-bold text-xl shadow-xl hover:bg-[#1ebe5d] hover:shadow-[0_12px_40px_rgba(37,211,102,0.35)] hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Chat on WhatsApp
+            </a>
+
+            {/* Map embed */}
+            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm h-52">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823257!2d72.74109995!3d19.08219865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1703000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <div className="bg-white rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-gray-100 p-8 text-readable">
+              {submitted ? (
+                <div className="flex flex-col items-center text-center py-10 gap-4">
+                  <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center">
+                    <FaCheckCircle className="text-5xl text-[#48BB78]" />
+                  </div>
+                  <h3
+                    className="text-3xl font-bold text-[#1A1A2E]"
+                    style={{ fontFamily: "var(--font-nunito)" }}
+                  >
+                    Message Sent! 🎉
+                  </h3>
+                  <p className="text-[#4A4A6A]">
+                    Thank you, <strong>{form.name}</strong>! We'll get back to you within a few hours.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSubmitted(false);
+                      setForm(initialForm);
+                    }}
+                    className="px-6 py-2.5 rounded-xl border-2 border-[#FF6B35] text-[#FF6B35] font-semibold hover:bg-orange-50 transition-colors duration-200 text-base"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                  <div>
+                    <h3
+                      className="text-2xl font-bold text-[#1A1A2E] mb-1"
+                      style={{ fontFamily: "var(--font-nunito)" }}
+                    >
+                      Send us a Message
+                    </h3>
+                    <p className="text-base text-[#8888AA]">
+                      We typically respond within 2-4 hours.
+                    </p>
+                  </div>
+
+                  {[
+                    { label: "Your Name", name: "name" as const, type: "text", placeholder: "e.g. Rahul Verma" },
+                    { label: "Phone Number", name: "phone" as const, type: "tel", placeholder: "Your mobile number" },
+                  ].map((field) => (
+                    <div key={field.name} className="flex flex-col gap-1.5">
+                      <label className="text-base font-semibold text-[#1A1A2E]">
+                        {field.label} <span className="text-[#FF6B35]">*</span>
+                      </label>
+                      <input
+                        type={field.type}
+                        value={form[field.name]}
+                        onChange={(e) => {
+                          setForm((p) => ({ ...p, [field.name]: e.target.value }));
+                          if (errors[field.name]) setErrors((p) => ({ ...p, [field.name]: "" }));
+                        }}
+                        placeholder={field.placeholder}
+                        className={`w-full px-4 py-3 rounded-2xl border text-[#1A1A2E] placeholder-[#C0C0D0] text-base transition-all duration-200 outline-none focus:ring-2 focus:ring-[#FF6B35]/30 ${
+                          errors[field.name]
+                            ? "border-red-300"
+                            : "border-gray-200 focus:border-[#FF6B35] hover:border-orange-200"
+                        }`}
+                      />
+                      {errors[field.name] && (
+                        <p className="text-sm text-red-500">{errors[field.name]}</p>
+                      )}
+                    </div>
+                  ))}
+
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-base font-semibold text-[#1A1A2E]">
+                      Message <span className="text-[#FF6B35]">*</span>
+                    </label>
+                    <textarea
+                      value={form.message}
+                      onChange={(e) => {
+                        setForm((p) => ({ ...p, message: e.target.value }));
+                        if (errors.message) setErrors((p) => ({ ...p, message: "" }));
+                      }}
+                      placeholder="Tell us how we can help you..."
+                      rows={5}
+                      className={`w-full px-4 py-3 rounded-2xl border text-[#1A1A2E] placeholder-[#C0C0D0] text-base transition-all duration-200 outline-none focus:ring-2 focus:ring-[#FF6B35]/30 resize-none ${
+                        errors.message
+                          ? "border-red-300"
+                          : "border-gray-200 focus:border-[#FF6B35] hover:border-orange-200"
+                      }`}
+                    />
+                    {errors.message && (
+                      <p className="text-sm text-red-500">{errors.message}</p>
+                    )}
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full py-4 rounded-2xl gradient-orange text-white font-bold text-lg shadow-lg hover:shadow-[0_12px_40px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-70 flex items-center justify-center gap-2"
+                  >
+                    {submitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Send Message ✉️"
+                    )}
+                  </button>
+                </form>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
