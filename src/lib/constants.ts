@@ -262,7 +262,7 @@ export const VIDEOS = [
     title: "See Pawcort in Action",
     description:
       "Watch how we bring pets into wedding celebrations — calm, cared for, and part of the family story.",
-    duration: "0:22",
+    duration: "0:21",
     category: "Brand Story",
     emoji: "🎬",
     src: "/videos/home-hero.mp4",
