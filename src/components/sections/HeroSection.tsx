@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaStar, FaShieldAlt } from "react-icons/fa";
+import { FaStar, FaShieldAlt, FaInstagram } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
-import { WHATSAPP_URL, HOME_VIDEO, BRAND_TAGLINE, BRAND_NAME } from "@/lib/constants";
+import { INSTAGRAM_URL, HOME_VIDEO, BRAND_TAGLINE, BRAND_NAME } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import PhoneVideoMockup from "@/components/ui/PhoneVideoMockup";
 
@@ -76,12 +76,13 @@ export default function HeroSection() {
                 <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href={WHATSAPP_URL}
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#25D366] font-bold text-lg border-2 border-[#25D366] shadow-md hover:bg-[#25D366] hover:text-white transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#E1306C] font-bold text-lg border-2 border-[#E1306C] shadow-md hover:text-white hover:border-[#E1306C] hover:bg-[#E1306C] transition-all duration-300"
               >
-                Chat on WhatsApp
+                <FaInstagram className="w-5 h-5" />
+                Follow on Instagram
               </a>
             </motion.div>
 

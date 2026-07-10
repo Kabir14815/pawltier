@@ -1,11 +1,8 @@
 export const BRAND_NAME = "Pawcort";
 export const BRAND_TAGLINE = "Loved. Included. Celebrated.";
 
-export const WHATSAPP_NUMBER = "+919999999999";
-export const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi, I'd like to book Pawcort for my wedding."
-);
-export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER.replace("+", "")}?text=${WHATSAPP_MESSAGE}`;
+export const INSTAGRAM_URL = "https://www.instagram.com/pawcort1/";
+export const INSTAGRAM_HANDLE = "@pawcort1";
 
 export const CONTACT_PHONE = "+91 99999 99999";
 export const CONTACT_EMAIL = "hello@pawcort.in";

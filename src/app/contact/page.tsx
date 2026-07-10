@@ -5,7 +5,7 @@ import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
   title: "Contact Us — Pawcort",
-  description: "Get in touch with Pawcort. Phone, email, WhatsApp, and contact form.",
+  description: "Get in touch with Pawcort. Phone, email, Instagram, and contact form.",
 };
 
 export default function ContactPage() {

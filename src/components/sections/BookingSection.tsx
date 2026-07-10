@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { FaPaw, FaCheckCircle, FaCalendarAlt } from "react-icons/fa";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { INSTAGRAM_URL } from "@/lib/constants";
 
 interface Form {
   occasion: string;
@@ -114,10 +114,6 @@ export default function BookingSection({ hideHeader = false }: { hideHeader?: bo
   const today = new Date().toISOString().split("T")[0];
   const STEPS = ["Your Event", "Your Pet", "Contact"];
 
-  const waMessage = encodeURIComponent(
-    `Hi! I'd like to book a pet sitter for my ${form.occasion} on ${form.date}. Pet: ${form.petName || form.petType}, duration: ${form.duration}. Name: ${form.name}, Phone: ${form.phone}`
-  );
-
   return (
     <section id="booking" ref={ref} className="section-padding bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-72 h-72 bg-orange-50 rounded-full opacity-50 blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
@@ -180,12 +176,15 @@ export default function BookingSection({ hideHeader = false }: { hideHeader?: bo
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <a
-                    href={`${WHATSAPP_URL.split("?")[0]}?text=${waMessage}`}
+                    href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-3 rounded-2xl bg-[#25D366] text-white font-bold text-base text-center hover:opacity-90 transition-opacity"
+                    className="flex-1 py-3 rounded-2xl text-white font-bold text-base text-center hover:opacity-90 transition-opacity"
+                    style={{
+                      background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)",
+                    }}
                   >
-                    Continue on WhatsApp
+                    Follow on Instagram
                   </a>
                   <button
                     onClick={() => { setSubmitted(false); setForm(empty); setStep(0); }}

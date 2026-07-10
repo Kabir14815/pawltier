@@ -28,7 +28,7 @@ const features = [
     icon: FaCamera,
     title: "Live Updates & Photos",
     description:
-      "Receive real-time photos and WhatsApp updates throughout the day so you never miss a moment with your pet.",
+      "Receive real-time photos and Instagram updates throughout the day so you never miss a moment with your pet.",
     color: "#5A7A8A",
     bgColor: "bg-[#EDF3F6]",
     borderColor: "border-[#C8DAE4]",

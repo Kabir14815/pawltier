@@ -1,15 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 import BrandLogo from "@/components/ui/BrandLogo";
 import Container from "@/components/ui/Container";
-import { WHATSAPP_URL, CONTACT_EMAIL, CONTACT_PHONE, FOOTER_LINKS, BRAND_NAME } from "@/lib/constants";
+import { INSTAGRAM_URL, CONTACT_EMAIL, CONTACT_PHONE, FOOTER_LINKS, BRAND_NAME } from "@/lib/constants";
 
 const socialLinks = [
-  { icon: FaInstagram, href: "https://instagram.com", label: "Instagram", color: "hover:text-[#E1306C]", bg: "hover:bg-pink-50" },
+  { icon: FaInstagram, href: INSTAGRAM_URL, label: "Instagram", color: "hover:text-[#E1306C]", bg: "hover:bg-pink-50" },
   { icon: FaFacebook, href: "https://facebook.com", label: "Facebook", color: "hover:text-[#1877F2]", bg: "hover:bg-blue-50" },
-  { icon: FaWhatsapp, href: WHATSAPP_URL, label: "WhatsApp", color: "hover:text-[#25D366]", bg: "hover:bg-green-50" },
 ];
 
 export default function Footer() {
@@ -27,9 +26,13 @@ export default function Footer() {
             <Link href="/book" className="px-6 py-3 rounded-full bg-white text-[#5C4033] font-bold hover:bg-[#FAF6F0] transition-colors shadow-lg">
               Book Now
             </Link>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-white/20 text-white font-bold border border-white/30 hover:bg-white/30 transition-colors">
-              WhatsApp
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full bg-white/20 text-white font-bold border border-white/30 hover:bg-white/30 transition-colors"
+            >
+              Instagram
             </a>
           </div>
         </Container>
