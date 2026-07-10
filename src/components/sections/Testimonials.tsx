@@ -9,8 +9,8 @@ const testimonials = [
     id: 1,
     quote:
       "I could enjoy my entire wedding without worrying about Bruno for a single second. The sitter sent photos every 30 minutes and Bruno looked so happy! Best service ever.",
-    author: "Priya Sharma",
-    role: "Wedding at The Grand, Mumbai",
+    author: "Jennifer Carter",
+    role: "Wedding at The Estate at Piedmont, Atlanta",
     pet: "Bruno — Golden Retriever",
     emoji: "🐶",
     rating: 5,
@@ -19,8 +19,8 @@ const testimonials = [
     id: 2,
     quote:
       "Our sitter sent photos every hour and even recorded a cute video of Whiskers playing. I was able to enjoy my sister's birthday party completely stress-free. Highly recommend!",
-    author: "Rohan Mehta",
-    role: "Birthday Party, Bangalore",
+    author: "Marcus Lewis",
+    role: "Birthday Party, Buckhead",
     pet: "Whiskers — Persian Cat",
     emoji: "🐱",
     rating: 5,
@@ -29,8 +29,8 @@ const testimonials = [
     id: 3,
     quote:
       "An absolute lifesaver! We wanted our dog at our wedding but couldn't manage him ourselves. Pawcort arranged a wonderful concierge within hours. Milo was treated like family.",
-    author: "Ananya Krishnan",
-    role: "Family Function, Chennai",
+    author: "Alicia Brooks",
+    role: "Family Celebration, Roswell",
     pet: "Milo — Beagle",
     emoji: "🐶",
     rating: 5,
@@ -38,9 +38,9 @@ const testimonials = [
   {
     id: 4,
     quote:
-      "Traveled to Delhi for a business conference and left Biscuit with their overnight care. She was fed on time, given walks, and I received a goodnight photo. 10/10 experience.",
-    author: "Vikram Nair",
-    role: "Overnight Care, Delhi",
+      "We traveled to a weekend event in Savannah and left Biscuit with their overnight care. She was fed on time, given walks, and I received a goodnight photo. 10/10 experience.",
+    author: "Derek Morgan",
+    role: "Overnight Care, Savannah",
     pet: "Biscuit — Labrador",
     emoji: "🐾",
     rating: 5,
@@ -49,8 +49,8 @@ const testimonials = [
     id: 5,
     quote:
       "My senior dog Max has special medical needs and I was nervous about leaving him. The sitter handled everything perfectly — medications, walks, and lots of cuddles. Truly amazing.",
-    author: "Sunita Patel",
-    role: "Senior Pet Care, Pune",
+    author: "Sofia Patel",
+    role: "Senior Pet Care, Alpharetta",
     pet: "Max — Senior Labrador",
     emoji: "❤️",
     rating: 5,

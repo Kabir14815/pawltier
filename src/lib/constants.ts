@@ -4,8 +4,8 @@ export const BRAND_TAGLINE = "Loved. Included. Celebrated.";
 export const INSTAGRAM_URL = "https://www.instagram.com/pawcort1/";
 export const INSTAGRAM_HANDLE = "@pawcort1";
 
-export const CONTACT_PHONE = "+91 99999 99999";
-export const CONTACT_EMAIL = "hello@pawcort.in";
+export const CONTACT_PHONE = "+1 (404) 502-6475";
+export const CONTACT_EMAIL = "talya@pawcort.com";
 
 export const WEDDING_PROMISES = [
   {
@@ -73,7 +73,7 @@ export const SERVICES = [
     badge: "Most Popular",
     badgeColor: "bg-[#F0EAE0] text-[#5C7260]",
     highlight: true,
-    price: "From ₹499/hr",
+    price: "From $95/hr",
   },
   {
     emoji: "🎉",
@@ -82,7 +82,7 @@ export const SERVICES = [
     badge: null,
     badgeColor: "",
     highlight: false,
-    price: "From ₹399/hr",
+    price: "From $75/hr",
   },
   {
     emoji: "🏠",
@@ -91,7 +91,7 @@ export const SERVICES = [
     badge: null,
     badgeColor: "",
     highlight: false,
-    price: "From ₹449/hr",
+    price: "From $85/hr",
   },
   {
     emoji: "🌙",
@@ -100,7 +100,7 @@ export const SERVICES = [
     badge: "Premium",
     badgeColor: "bg-purple-100 text-purple-600",
     highlight: false,
-    price: "From ₹1,999/night",
+    price: "From $225/night",
   },
   {
     emoji: "❤️",
@@ -109,7 +109,7 @@ export const SERVICES = [
     badge: null,
     badgeColor: "",
     highlight: false,
-    price: "From ₹549/hr",
+    price: "From $105/hr",
   },
   {
     emoji: "🐾",
@@ -118,23 +118,23 @@ export const SERVICES = [
     badge: "New",
     badgeColor: "bg-green-100 text-green-600",
     highlight: false,
-    price: "From ₹449/hr",
+    price: "From $85/hr",
   },
 ];
 
 export const PRICING = [
-  { service: "Wedding Pet Sitting", duration: "4–8 hours", price: "₹499/hr", note: "Venue or home" },
-  { service: "Event Pet Sitting", duration: "2–6 hours", price: "₹399/hr", note: "Any event type" },
-  { service: "Home Pet Sitting", duration: "Hourly", price: "₹449/hr", note: "At your home" },
-  { service: "Overnight Care", duration: "12+ hours", price: "₹1,999/night", note: "Live-in sitter" },
-  { service: "Senior Pet Care", duration: "Hourly", price: "₹549/hr", note: "Medical support" },
-  { service: "Puppy Care", duration: "Hourly", price: "₹449/hr", note: "Extra playtime" },
+  { service: "Wedding Pet Sitting", duration: "4–8 hours", price: "$95/hr", note: "Venue or home" },
+  { service: "Event Pet Sitting", duration: "2–6 hours", price: "$75/hr", note: "Any event type" },
+  { service: "Home Pet Sitting", duration: "Hourly", price: "$85/hr", note: "At your home" },
+  { service: "Overnight Care", duration: "12+ hours", price: "$225/night", note: "Live-in sitter" },
+  { service: "Senior Pet Care", duration: "Hourly", price: "$105/hr", note: "Medical support" },
+  { service: "Puppy Care", duration: "Hourly", price: "$85/hr", note: "Extra playtime" },
 ];
 
 export const FEATURED_TESTIMONIAL = {
   quote: "Bruno walked down the aisle with us — and I didn't worry once. Pawcort made our family complete on the most important day of our lives.",
   author: "Priya Sharma",
-  role: "Wedding at The Grand, Mumbai",
+  role: "Wedding at The Estate at Piedmont, Atlanta",
   pet: "Bruno — Golden Retriever",
   emoji: "🐶",
   rating: 5,

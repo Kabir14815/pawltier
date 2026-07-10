@@ -14,7 +14,7 @@ export default function HomePreview() {
       <section className="py-14 lg:py-16 bg-white border-y border-[#E8E0D4]">
         <Container>
           <p className="text-center text-sm font-bold text-[#8A9A8E] uppercase tracking-widest mb-8">
-            Trusted by couples across India
+            Trusted by pet parents across Atlanta and the surrounding Georgia area
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {STATS.map((s) => (
@@ -90,7 +90,7 @@ export default function HomePreview() {
                 <p className="text-base text-[#4A5A50] mb-4 line-clamp-3 leading-relaxed flex-1">
                   {s.description}
                 </p>
-                <p className="text-base font-bold text-[#5C4033] mt-auto">{s.price}</p>
+                <p className="text-base font-medium text-[#6A7A6B] mt-auto">Custom booking available</p>
               </motion.div>
             ))}
           </div>

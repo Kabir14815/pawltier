@@ -5,8 +5,8 @@ import Services from "@/components/sections/Services";
 import PricingSection from "@/components/sections/PricingSection";
 
 export const metadata: Metadata = {
-  title: "Services & Pricing — Pawcort",
-  description: "Wedding pet sitting, event care, overnight stays, and more. Transparent pricing for every occasion.",
+  title: "Services — Pawcort",
+  description: "Wedding pet sitting, event care, overnight stays, and more. Tailored concierge care for pets across Atlanta and Georgia.",
 };
 
 export default function ServicesPage() {
@@ -16,7 +16,7 @@ export default function ServicesPage() {
         badge="What We Offer"
         title="Our"
         highlight="Services"
-        subtitle="From weddings to overnight stays — trusted pet care for every occasion across India."
+        subtitle="From weddings to overnight stays — trusted pet care for every occasion across Atlanta and the surrounding Georgia area."
       />
       <Services hideHeader />
       <PricingSection />

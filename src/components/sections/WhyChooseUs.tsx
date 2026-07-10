@@ -66,9 +66,9 @@ const features = [
   },
   {
     icon: FaDollarSign,
-    title: "Affordable Pricing",
+    title: "Custom Care Plans",
     description:
-      "Premium care at honest prices. No hidden fees, transparent booking — quality pet care for every budget.",
+      "Every visit is tailored to your pet’s routine, comfort, and the details of your event. We create a plan that fits your needs.",
     color: "#C9952E",
     bgColor: "bg-[#FBF5EA]",
     borderColor: "border-[#EDD9B5]",

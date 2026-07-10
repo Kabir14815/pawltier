@@ -1,17 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaPhone, FaCommentDots } from "react-icons/fa";
 import BrandLogo from "@/components/ui/BrandLogo";
 import Container from "@/components/ui/Container";
 import { INSTAGRAM_URL, CONTACT_EMAIL, CONTACT_PHONE, FOOTER_LINKS, BRAND_NAME } from "@/lib/constants";
 
 const socialLinks = [
   { icon: FaInstagram, href: INSTAGRAM_URL, label: "Instagram", color: "hover:text-[#E1306C]", bg: "hover:bg-pink-50" },
-  { icon: FaFacebook, href: "https://facebook.com", label: "Facebook", color: "hover:text-[#1877F2]", bg: "hover:bg-blue-50" },
+  { icon: FaFacebook, href: "https://facebook.com/", label: "Facebook", color: "hover:text-[#1877F2]", bg: "hover:bg-blue-50" },
 ];
 
 export default function Footer() {
+  const phoneHref = `tel:${CONTACT_PHONE.replace(/[^\d+]/g, "")}`;
+  const smsHref = `sms:${CONTACT_PHONE.replace(/[^d+]/g, "")}?body=${encodeURIComponent("Hi there, I’d like to learn more about your pet concierge services.")}`;
+
   return (
     <footer className="bg-[#3D2A22] text-white">
       <div className="bg-gradient-to-r from-[#5C4033] to-[#7A5C4D] py-12 lg:py-14">
@@ -22,7 +25,7 @@ export default function Footer() {
             </h3>
             <p className="text-[#F0EAE0]">Join 500+ couples who trust {BRAND_NAME}.</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-3">
             <Link href="/book" className="px-6 py-3 rounded-full bg-white text-[#5C4033] font-bold hover:bg-[#FAF6F0] transition-colors shadow-lg">
               Book Now
             </Link>
@@ -33,6 +36,12 @@ export default function Footer() {
               className="px-6 py-3 rounded-full bg-white/20 text-white font-bold border border-white/30 hover:bg-white/30 transition-colors"
             >
               Instagram
+            </a>
+            <a href={phoneHref} className="px-6 py-3 rounded-full bg-white/20 text-white font-bold border border-white/30 hover:bg-white/30 transition-colors flex items-center gap-2">
+              <FaPhone className="text-sm" /> Call
+            </a>
+            <a href={smsHref} className="px-6 py-3 rounded-full bg-white/20 text-white font-bold border border-white/30 hover:bg-white/30 transition-colors flex items-center gap-2">
+              <FaCommentDots className="text-sm" /> Message
             </a>
           </div>
         </Container>

@@ -10,39 +10,31 @@ export default function PricingSection() {
       <div className="max-w-4xl mx-auto px-4">
         <div className="section-intro mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1A2E] mb-3" style={{ fontFamily: "var(--font-nunito)" }}>
-            Transparent Pricing
+            Tailored Care Plans
           </h2>
-          <p className="text-lg text-[#4A4A6A]">No hidden fees. Final quote confirmed before booking.</p>
+          <p className="text-lg text-[#4A4A6A]">Every booking is customized to your pet, schedule, and celebration. We will confirm the right fit for you.</p>
         </div>
 
         <div className="bg-white rounded-3xl border border-orange-50 shadow-sm overflow-hidden text-readable">
-          <div className="grid grid-cols-4 gap-4 px-6 py-4 bg-orange-50 text-sm font-bold uppercase tracking-wider text-[#FF6B35] hidden sm:grid">
-            <span className="col-span-2">Service</span>
-            <span>Duration</span>
-            <span>Price</span>
+          <div className="grid gap-4 px-6 py-5 border-t border-orange-50 items-start">
+            <div className="space-y-2">
+              <p className="font-bold text-[#1A1A2E]">Wedding Pet Concierge</p>
+              <p className="text-sm text-[#8888AA]">Ceremony, photos, reception support, and calm care for your pet on the wedding day.</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-bold text-[#1A1A2E]">Event & Travel Care</p>
+              <p className="text-sm text-[#8888AA]">Flexible support for parties, travel days, family gatherings, and special occasions.</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-bold text-[#1A1A2E]">Home & Overnight Care</p>
+              <p className="text-sm text-[#8888AA]">At-home visits, overnight support, and extra attention for pets with special needs.</p>
+            </div>
           </div>
-          {PRICING.map((row, i) => (
-            <motion.div
-              key={row.service}
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="grid sm:grid-cols-4 gap-2 sm:gap-4 px-6 py-5 border-t border-orange-50 items-center"
-            >
-              <div className="sm:col-span-2">
-                <p className="font-bold text-[#1A1A2E]">{row.service}</p>
-                <p className="text-sm text-[#8888AA] mt-0.5">{row.note}</p>
-              </div>
-              <p className="text-base text-[#4A4A6A]">{row.duration}</p>
-              <p className="text-base font-bold text-[#FF6B35]">{row.price}</p>
-            </motion.div>
-          ))}
         </div>
 
         <div className="text-center mt-8">
           <Link href="/book" className="inline-flex px-8 py-3.5 rounded-full gradient-orange text-white font-bold hover:opacity-90 transition-opacity">
-            Get a Quote →
+            Request a Custom Plan →
           </Link>
         </div>
       </div>

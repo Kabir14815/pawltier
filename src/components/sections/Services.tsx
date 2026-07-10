@@ -102,8 +102,8 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
               >
                 {service.description}
               </p>
-              <p className={`text-base font-bold mb-3 ${service.highlight ? "text-white" : "text-[#5C4033]"}`}>
-                {service.price}
+              <p className={`text-base font-medium mb-3 ${service.highlight ? "text-white/90" : "text-[#6A7A6B]"}`}>
+                Custom booking available
               </p>
 
               <Link

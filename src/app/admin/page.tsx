@@ -7,60 +7,60 @@ import { HiMenuAlt3 } from "react-icons/hi";
 const mockAppointments = [
   {
     id: "APT001",
-    ownerName: "Priya Sharma",
+    ownerName: "Jennifer Carter",
     petName: "Bruno",
     petType: "Dog",
     eventDate: "2024-02-15",
-    eventLocation: "The Grand Banquet Hall, Mumbai",
-    mobile: "+91 98765 43210",
+    eventLocation: "The Estate at Piedmont, Atlanta",
+    mobile: "+1 (404) 555-0182",
     status: "confirmed",
     service: "Wedding Pet Sitting",
     hours: "Full Day",
   },
   {
     id: "APT002",
-    ownerName: "Rohan Mehta",
+    ownerName: "Marcus Lewis",
     petName: "Whiskers",
     petType: "Cat",
     eventDate: "2024-02-18",
-    eventLocation: "Jaipur Palace Resort",
-    mobile: "+91 87654 32109",
+    eventLocation: "Buckhead Hotel, Atlanta",
+    mobile: "+1 (404) 555-0183",
     status: "pending",
     service: "Event Pet Sitting",
     hours: "5-6 hours",
   },
   {
     id: "APT003",
-    ownerName: "Ananya K",
+    ownerName: "Alicia Brooks",
     petName: "Milo",
     petType: "Dog",
     eventDate: "2024-02-20",
-    eventLocation: "Home — Koramangala, Bangalore",
-    mobile: "+91 76543 21098",
+    eventLocation: "Home — Roswell, GA",
+    mobile: "+1 (770) 555-0191",
     status: "confirmed",
     service: "Home Pet Sitting",
     hours: "3-4 hours",
   },
   {
     id: "APT004",
-    ownerName: "Vikram Nair",
+    ownerName: "Derek Morgan",
     petName: "Biscuit",
     petType: "Dog",
     eventDate: "2024-02-22",
-    eventLocation: "Hotel Taj, Delhi",
-    mobile: "+91 65432 10987",
+    eventLocation: "Savannah Riverfront Stay, Savannah",
+    mobile: "+1 (912) 555-0146",
     status: "cancelled",
     service: "Overnight Care",
     hours: "Overnight",
   },
   {
     id: "APT005",
-    ownerName: "Sunita Patel",
+    ownerName: "Sofia Patel",
     petName: "Max",
     petType: "Dog",
     eventDate: "2024-02-25",
-    eventLocation: "Home — Baner, Pune",
-    mobile: "+91 54321 09876",
+    eventLocation: "Home — Alpharetta, GA",
+    mobile: "+1 (678) 555-0178",
     status: "pending",
     service: "Senior Pet Care",
     hours: "1-2 hours",
@@ -71,7 +71,7 @@ const stats = [
   { label: "Total Appointments", value: "247", icon: FaCalendarAlt, color: "#FF6B35", bg: "bg-orange-50", trend: "+12% this month" },
   { label: "Active Sitters", value: "38", icon: FaUsers, color: "#4A90D9", bg: "bg-blue-50", trend: "+3 new" },
   { label: "Avg. Rating", value: "4.9★", icon: FaStar, color: "#F59E0B", bg: "bg-yellow-50", trend: "Based on 189 reviews" },
-  { label: "Revenue", value: "₹1.2L", icon: FaChartBar, color: "#48BB78", bg: "bg-green-50", trend: "+18% this month" },
+  { label: "Revenue", value: "$120K", icon: FaChartBar, color: "#48BB78", bg: "bg-green-50", trend: "+18% this month" },
 ];
 
 const statusStyles: Record<string, string> = {
@@ -183,7 +183,7 @@ export default function AdminDashboard() {
               {activeTab === "analytics" && "Analytics"}
             </h1>
             <p className="text-sm text-gray-400">
-              {new Date().toLocaleDateString("en-IN", {
+              {new Date().toLocaleDateString("en-US", {
                 weekday: "long",
                 year: "numeric",
                 month: "long",
@@ -281,7 +281,7 @@ export default function AdminDashboard() {
                             <p className="text-sm text-gray-400">{apt.hours}</p>
                           </td>
                           <td className="px-5 py-4 whitespace-nowrap text-[#4A4A6A]">
-                            {new Date(apt.eventDate).toLocaleDateString("en-IN", {
+                            {new Date(apt.eventDate).toLocaleDateString("en-US", {
                               day: "numeric",
                               month: "short",
                               year: "numeric",
@@ -376,10 +376,10 @@ export default function AdminDashboard() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { label: "This Month's Revenue", value: "₹1,24,500", note: "+18% vs last month" },
+                    { label: "This Month's Revenue", value: "$124,500", note: "+18% vs last month" },
                     { label: "Conversion Rate", value: "68%", note: "+5% vs last month" },
                     { label: "Repeat Customers", value: "43%", note: "Strong loyalty" },
-                    { label: "Avg. Booking Value", value: "₹1,240", note: "Per appointment" },
+                    { label: "Avg. Booking Value", value: "$1,240", note: "Per appointment" },
                   ].map((m) => (
                     <div key={m.label} className="bg-gray-50 rounded-xl p-4 text-left">
                       <p className="text-sm text-gray-400 mb-1">{m.label}</p>
