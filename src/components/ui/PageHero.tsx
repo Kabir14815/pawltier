@@ -14,7 +14,7 @@ export default function PageHero({ badge, title, highlight, subtitle }: PageHero
   return (
     <section className="relative pt-32 pb-16 lg:pt-36 lg:pb-20 gradient-hero overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-[#6B8570]/15 rounded-full blur-3xl" />
+        <div className="absolute top-10 right-10 w-64 h-64 bg-[#5C4033]/15 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-10 w-48 h-48 bg-[#E8B4A0]/25 rounded-full blur-3xl" />
       </div>
       <Container narrow>

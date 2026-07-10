@@ -11,8 +11,8 @@ export default function PromisesSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="section-padding bg-[#F7F2EA] relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-80 h-80 bg-[#6B8570]/10 rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+    <section ref={ref} className="section-padding bg-[#FAF6F0] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-80 h-80 bg-[#5C4033]/10 rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#E8B4A0]/20 rounded-full -translate-x-1/3 translate-y-1/3 pointer-events-none" />
 
       <Container className="relative">
@@ -30,7 +30,7 @@ export default function PromisesSection() {
                 <span className="text-gradient-sage">One Beautiful Day.</span>
               </>
             }
-            description="You shouldn't have to choose between a perfect wedding and the pet who feels like home. Pawltier exists so you can have both — without carrying the worry."
+            description="You shouldn't have to choose between a perfect wedding and the pet who feels like home. Pawcort exists so you can have both — without carrying the worry."
           />
         </motion.div>
 
@@ -43,7 +43,7 @@ export default function PromisesSection() {
               transition={{ duration: 0.55, delay: 0.1 + i * 0.12 }}
               className="group relative surface-card p-7 lg:p-8 flex flex-col h-full hover:shadow-[0_16px_48px_rgba(45,59,50,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="absolute top-0 left-8 right-8 h-1 rounded-b-full bg-gradient-to-r from-[#6B8570] to-[#8FA892] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute top-0 left-8 right-8 h-1 rounded-b-full bg-gradient-to-r from-[#5C4033] to-[#7A5C4D] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#F0EBE3] text-2xl mb-5 shrink-0">
                 {item.emoji}

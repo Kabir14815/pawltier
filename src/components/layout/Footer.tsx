@@ -14,17 +14,17 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2D3B32] text-white">
-      <div className="bg-gradient-to-r from-[#6B8570] to-[#8FA892] py-12 lg:py-14">
+    <footer className="bg-[#3D2A22] text-white">
+      <div className="bg-gradient-to-r from-[#5C4033] to-[#7A5C4D] py-12 lg:py-14">
         <Container className="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
             <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-1" style={{ fontFamily: "var(--font-nunito)" }}>
               Ready for your wedding day? 🐾
             </h3>
-            <p className="text-[#E8F0E9]">Join 500+ couples who trust {BRAND_NAME}.</p>
+            <p className="text-[#F0EAE0]">Join 500+ couples who trust {BRAND_NAME}.</p>
           </div>
           <div className="flex gap-3">
-            <Link href="/book" className="px-6 py-3 rounded-full bg-white text-[#6B8570] font-bold hover:bg-[#F7F2EA] transition-colors shadow-lg">
+            <Link href="/book" className="px-6 py-3 rounded-full bg-white text-[#5C4033] font-bold hover:bg-[#FAF6F0] transition-colors shadow-lg">
               Book Now
             </Link>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-gray-400 text-base hover:text-[#8FA892] transition-colors duration-200">
+                    <Link href={link.href} className="text-gray-400 text-base hover:text-[#7A5C4D] transition-colors duration-200">
                       {link.label}
                     </Link>
                   </li>
@@ -71,8 +71,8 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4 text-base text-gray-500 text-center sm:text-left">
           <p>© {new Date().getFullYear()} {BRAND_NAME}. All rights reserved.</p>
           <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-end">
-            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-[#8FA892] transition-colors">{CONTACT_EMAIL}</a>
-            <a href={`tel:${CONTACT_PHONE}`} className="hover:text-[#8FA892] transition-colors">{CONTACT_PHONE}</a>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-[#7A5C4D] transition-colors">{CONTACT_EMAIL}</a>
+            <a href={`tel:${CONTACT_PHONE}`} className="hover:text-[#7A5C4D] transition-colors">{CONTACT_PHONE}</a>
           </div>
         </div>
       </Container>

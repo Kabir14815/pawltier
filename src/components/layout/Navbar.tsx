@@ -59,13 +59,13 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={`relative px-4 py-2 text-sm font-semibold tracking-wide transition-colors duration-200 rounded-full ${
-                      active ? "text-[#6B8570]" : "text-[#4A5A50] hover:text-[#2D3B32]"
+                      active ? "text-[#5C4033]" : "text-[#4A5A50] hover:text-[#3D2A22]"
                     }`}
                   >
                     {active && (
                       <motion.span
                         layoutId="nav-pill"
-                        className="absolute inset-0 rounded-full bg-[#E8F0E9] border border-[#D4E4D8]/80"
+                        className="absolute inset-0 rounded-full bg-[#F0EAE0] border border-[#D4E4D8]/80"
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -96,14 +96,14 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-[#2D3B32]/5 hover:bg-[#2D3B32]/10 transition-colors duration-200"
+              className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-[#3D2A22]/5 hover:bg-[#3D2A22]/10 transition-colors duration-200"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
             >
               {menuOpen ? (
-                <HiX className="text-xl text-[#2D3B32]" />
+                <HiX className="text-xl text-[#3D2A22]" />
               ) : (
-                <HiMenuAlt3 className="text-xl text-[#2D3B32]" />
+                <HiMenuAlt3 className="text-xl text-[#3D2A22]" />
               )}
             </button>
           </div>
@@ -118,7 +118,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-40 bg-[#2D3B32]/20 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-40 bg-[#3D2A22]/20 backdrop-blur-sm lg:hidden"
               onClick={() => setMenuOpen(false)}
             />
 
@@ -143,19 +143,19 @@ export default function Navbar() {
                         href={link.href}
                         className={`flex items-center justify-between px-4 py-3.5 rounded-2xl font-semibold text-base transition-colors duration-200 ${
                           active
-                            ? "bg-[#E8F0E9] text-[#6B8570]"
-                            : "text-[#4A5A50] hover:bg-[#F7F2EA] hover:text-[#2D3B32]"
+                            ? "bg-[#F0EAE0] text-[#5C4033]"
+                            : "text-[#4A5A50] hover:bg-[#FAF6F0] hover:text-[#3D2A22]"
                         }`}
                       >
                         {link.label}
-                        {active && <span className="w-1.5 h-1.5 rounded-full bg-[#6B8570]" />}
+                        {active && <span className="w-1.5 h-1.5 rounded-full bg-[#5C4033]" />}
                       </Link>
                     </motion.div>
                   );
                 })}
               </nav>
 
-              <div className="p-4 pt-2 border-t border-[#E8F0E9] flex flex-col gap-2.5">
+              <div className="p-4 pt-2 border-t border-[#F0EAE0] flex flex-col gap-2.5">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"

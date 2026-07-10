@@ -19,7 +19,7 @@ export default function HomePreview() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {STATS.map((s) => (
               <div key={s.label} className="text-center">
-                <p className="text-3xl sm:text-4xl font-extrabold text-[#6B8570] heading-display">
+                <p className="text-3xl sm:text-4xl font-extrabold text-[#5C4033] heading-display">
                   {s.value}
                   {s.suffix}
                 </p>
@@ -30,7 +30,7 @@ export default function HomePreview() {
         </Container>
       </section>
 
-      <section className="section-padding bg-[#F7F2EA]">
+      <section className="section-padding bg-[#FAF6F0]">
         <Container>
           <SectionHeader
             eyebrow="Where Life Happens"
@@ -40,7 +40,7 @@ export default function HomePreview() {
                 <span className="text-gradient-sage">Full Attention</span>
               </>
             }
-            description="Pawltier isn't just a booking service — it's peace of mind for the wedding you've been planning for months."
+            description="Pawcort isn't just a booking service — it's peace of mind for the wedding you've been planning for months."
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
@@ -90,7 +90,7 @@ export default function HomePreview() {
                 <p className="text-base text-[#4A5A50] mb-4 line-clamp-3 leading-relaxed flex-1">
                   {s.description}
                 </p>
-                <p className="text-base font-bold text-[#6B8570] mt-auto">{s.price}</p>
+                <p className="text-base font-bold text-[#5C4033] mt-auto">{s.price}</p>
               </motion.div>
             ))}
           </div>
@@ -103,22 +103,22 @@ export default function HomePreview() {
         </Container>
       </section>
 
-      <section className="py-16 lg:py-20 bg-gradient-to-r from-[#6B8570] to-[#8FA892]">
+      <section className="py-16 lg:py-20 bg-gradient-to-r from-[#5C4033] to-[#7A5C4D]">
         <Container narrow className="text-center">
-          <p className="text-sm font-bold tracking-widest uppercase text-[#E8F0E9] mb-3">
+          <p className="text-sm font-bold tracking-widest uppercase text-[#F0EAE0] mb-3">
             Your Turn
           </p>
           <h2 className="heading-section text-white mb-4 !text-2xl sm:!text-3xl">
             Write the Next Chapter — Without the Worry
           </h2>
-          <p className="text-body-lg text-[#E8F0E9] mb-8 leading-relaxed max-w-xl mx-auto">
+          <p className="text-body-lg text-[#F0EAE0] mb-8 leading-relaxed max-w-xl mx-auto">
             Book a verified concierge in 2 minutes. We call you back within 2 hours to confirm
             every detail.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
               href="/book"
-              className="px-8 py-3.5 rounded-full bg-white text-[#6B8570] text-lg font-bold hover:bg-[#F7F2EA] transition-colors shadow-lg"
+              className="px-8 py-3.5 rounded-full bg-white text-[#5C4033] text-lg font-bold hover:bg-[#FAF6F0] transition-colors shadow-lg"
             >
               Book a Concierge
             </Link>

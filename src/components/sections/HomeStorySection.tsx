@@ -17,7 +17,7 @@ export default function HomeStorySection() {
 
   return (
     <section ref={ref} className="section-padding bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-72 h-72 bg-[#E8F0E9] rounded-full -translate-x-1/2 -translate-y-1/2 opacity-70 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-[#F0EAE0] rounded-full -translate-x-1/2 -translate-y-1/2 opacity-70 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F0EBE3] rounded-full translate-x-1/3 translate-y-1/3 opacity-60 pointer-events-none" />
 
       <Container className="relative">
@@ -55,7 +55,7 @@ export default function HomeStorySection() {
                 }`}
               >
                 <div className={isEven ? "lg:order-1" : "lg:order-2"}>
-                  <span className="block text-xs font-bold tracking-widest uppercase text-[#6B8570] mb-3">
+                  <span className="block text-xs font-bold tracking-widest uppercase text-[#5C4033] mb-3">
                     Chapter {chapter.chapter}
                   </span>
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_16px_48px_rgba(45,59,50,0.1)] group">
@@ -100,14 +100,14 @@ export default function HomeStorySection() {
         >
           <div className="absolute inset-0 gradient-orange opacity-95" />
           <div className="relative px-6 sm:px-10 py-12 lg:py-14 text-center text-white max-w-3xl mx-auto">
-            <p className="text-sm font-bold tracking-widest uppercase text-[#E8F0E9] mb-3">
+            <p className="text-sm font-bold tracking-widest uppercase text-[#F0EAE0] mb-3">
               {HOME_PROMISE.eyebrow}
             </p>
             <h3 className="heading-section text-white mb-4 !text-2xl sm:!text-3xl">
               {HOME_PROMISE.title}
             </h3>
-            <p className="text-[#E8F0E9] text-body-lg leading-relaxed mb-8">{HOME_PROMISE.body}</p>
-            <Link href="/how-it-works" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#6B8570] font-bold text-lg hover:bg-[#F7F2EA] transition-colors shadow-lg">
+            <p className="text-[#F0EAE0] text-body-lg leading-relaxed mb-8">{HOME_PROMISE.body}</p>
+            <Link href="/how-it-works" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#5C4033] font-bold text-lg hover:bg-[#FAF6F0] transition-colors shadow-lg">
               See How It Works →
             </Link>
           </div>

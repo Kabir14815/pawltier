@@ -55,7 +55,7 @@ export default function PhoneVideoMockup({ video, autoPlay = true }: PhoneVideoM
         <div
           className="absolute inset-0 rounded-[44px] pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(107,133,112,0.25) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(92,64,51,0.25) 0%, transparent 70%)",
             filter: "blur(28px)",
             transform: "scale(1.12)",
           }}

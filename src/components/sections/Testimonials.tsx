@@ -28,7 +28,7 @@ const testimonials = [
   {
     id: 3,
     quote:
-      "An absolute lifesaver! We wanted our dog at our wedding but couldn't manage him ourselves. Pawltier arranged a wonderful concierge within hours. Milo was treated like family.",
+      "An absolute lifesaver! We wanted our dog at our wedding but couldn't manage him ourselves. Pawcort arranged a wonderful concierge within hours. Milo was treated like family.",
     author: "Ananya Krishnan",
     role: "Family Function, Chennai",
     pet: "Milo — Beagle",

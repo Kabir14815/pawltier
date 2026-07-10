@@ -66,7 +66,7 @@ export default function LoadingScreen() {
               </p>
             </div>
 
-            <div className="w-48 h-1.5 bg-[#E8F0E9] rounded-full overflow-hidden mt-4">
+            <div className="w-48 h-1.5 bg-[#F0EAE0] rounded-full overflow-hidden mt-4">
               <motion.div
                 className="h-full gradient-orange rounded-full"
                 animate={{ width: `${Math.min(progress, 100)}%` }}

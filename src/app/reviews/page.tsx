@@ -6,8 +6,8 @@ import Testimonials from "@/components/sections/Testimonials";
 import { REVIEWS_VIDEO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Reviews — Pawltier",
-  description: "Read real stories from 500+ couples who trusted Pawltier to include their pets in their wedding day.",
+  title: "Reviews — Pawcort",
+  description: "Read real stories from 500+ couples who trusted Pawcort to include their pets in their wedding day.",
 };
 
 export default function ReviewsPage() {

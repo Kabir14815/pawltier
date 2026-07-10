@@ -125,7 +125,7 @@ export default function AdminDashboard() {
             <FaPaw className="text-white text-lg" />
           </div>
           <div>
-            <span className="text-lg font-bold">Pawltier</span>
+            <span className="text-lg font-bold">Pawcort</span>
             <p className="text-sm text-gray-400">Admin Dashboard</p>
           </div>
         </div>

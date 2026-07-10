@@ -19,8 +19,8 @@ const features = [
     title: "Verified Pet Sitters",
     description:
       "Every sitter goes through thorough background checks, identity verification, and pet care training before joining.",
-    color: "#6B8570",
-    bgColor: "bg-[#E8F0E9]",
+    color: "#5C4033",
+    bgColor: "bg-[#F0EAE0]",
     borderColor: "border-[#D4E4D8]",
     iconBg: "bg-[#D4E4D8]",
   },
@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1.5 h-1.5 rounded-full bg-[#6B8570]"
+            className="absolute w-1.5 h-1.5 rounded-full bg-[#5C4033]"
             style={{
               left: `${(i * 13) % 100}%`,
               top: `${(i * 17) % 100}%`,
@@ -122,7 +122,7 @@ export default function WhyChooseUs() {
             eyebrow="Why Couples Love Us"
             title={
               <>
-                Why Choose <span className="text-gradient-sage">Pawltier</span>?
+                Why Choose <span className="text-gradient-sage">Pawcort</span>?
               </>
             }
             description="We go above and beyond to make sure both you and your pet have the best wedding day experience."
@@ -142,7 +142,7 @@ export default function WhyChooseUs() {
               className={`group relative ${feature.bgColor} ${feature.borderColor} border rounded-2xl p-7 card-hover flex flex-col h-full`}
             >
               <div className="absolute top-5 right-5 w-7 h-7 rounded-full bg-white shadow-md flex items-center justify-center">
-                <span className="text-[#6B8570] text-base font-bold">✓</span>
+                <span className="text-[#5C4033] text-base font-bold">✓</span>
               </div>
 
               <div

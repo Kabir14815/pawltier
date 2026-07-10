@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaStar, FaShieldAlt } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
-import { WHATSAPP_URL, HOME_VIDEO, BRAND_TAGLINE } from "@/lib/constants";
+import { WHATSAPP_URL, HOME_VIDEO, BRAND_TAGLINE, BRAND_NAME } from "@/lib/constants";
 import Container from "@/components/ui/Container";
 import PhoneVideoMockup from "@/components/ui/PhoneVideoMockup";
 
@@ -18,7 +18,7 @@ export default function HeroSection() {
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-32 -left-32 w-96 h-96 bg-[#6B8570] rounded-full opacity-[0.08] blur-3xl"
+          className="absolute -top-32 -left-32 w-96 h-96 bg-[#5C4033] rounded-full opacity-[0.08] blur-3xl"
         />
         <motion.div
           animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.2, 0.4] }}
@@ -36,9 +36,9 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass shadow-md mb-6"
             >
-              <FaShieldAlt className="text-[#6B8570] text-sm shrink-0" />
+              <FaShieldAlt className="text-[#5C4033] text-sm shrink-0" />
               <span className="text-sm font-semibold text-[#4A5A50]">Wedding Pet Concierge</span>
-              <span className="w-2 h-2 rounded-full bg-[#6B8570] animate-pulse shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-[#5C4033] animate-pulse shrink-0" />
             </motion.div>
 
             <motion.h1
@@ -59,9 +59,9 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-body-lg text-[#4A5A50] mb-8 max-w-lg mx-auto lg:mx-0 text-pretty"
             >
-              {BRAND_TAGLINE} — Pawltier is your wedding-day pet concierge. From aisle
+              {BRAND_TAGLINE} — {BRAND_NAME} is your wedding-day pet concierge. From aisle
               walks to reception care, we give you{" "}
-              <strong className="text-[#6B8570] font-semibold">peace of mind</strong> so
+              <strong className="text-[#5C4033] font-semibold">peace of mind</strong> so
               every guest, furry ones included, enjoys the celebration.
             </motion.p>
 
@@ -95,7 +95,7 @@ export default function HeroSection() {
                 {["🐶", "🐱", "💒", "🐾"].map((emoji, i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full bg-white border-2 border-[#F7F2EA] shadow-sm flex items-center justify-center text-base"
+                    className="w-10 h-10 rounded-full bg-white border-2 border-[#FAF6F0] shadow-sm flex items-center justify-center text-base"
                   >
                     {emoji}
                   </div>
@@ -106,7 +106,7 @@ export default function HeroSection() {
                   {[...Array(5)].map((_, i) => (
                     <FaStar key={i} className="text-[#C9952E] text-sm" />
                   ))}
-                  <span className="font-bold text-[#2D3B32] ml-1">4.9</span>
+                  <span className="font-bold text-[#3D2A22] ml-1">4.9</span>
                 </div>
                 <span className="text-sm text-[#8A9A8E]">500+ wedding pet families</span>
               </div>

@@ -5,7 +5,7 @@ import Services from "@/components/sections/Services";
 import PricingSection from "@/components/sections/PricingSection";
 
 export const metadata: Metadata = {
-  title: "Services & Pricing — Pawltier",
+  title: "Services & Pricing — Pawcort",
   description: "Wedding pet sitting, event care, overnight stays, and more. Transparent pricing for every occasion.",
 };
 

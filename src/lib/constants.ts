@@ -1,14 +1,14 @@
-export const BRAND_NAME = "Pawltier";
-export const BRAND_TAGLINE = "Care. Love. Companionship.";
+export const BRAND_NAME = "Pawcort";
+export const BRAND_TAGLINE = "Loved. Included. Celebrated.";
 
 export const WHATSAPP_NUMBER = "+919999999999";
 export const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi, I'd like to book Pawltier for my wedding."
+  "Hi, I'd like to book Pawcort for my wedding."
 );
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER.replace("+", "")}?text=${WHATSAPP_MESSAGE}`;
 
 export const CONTACT_PHONE = "+91 99999 99999";
-export const CONTACT_EMAIL = "hello@pawltier.in";
+export const CONTACT_EMAIL = "hello@pawcort.in";
 
 export const WEDDING_PROMISES = [
   {
@@ -74,7 +74,7 @@ export const SERVICES = [
     title: "Wedding Pet Concierge",
     description: "From ceremony to reception — your pet joins the celebration with a dedicated sitter who handles every detail.",
     badge: "Most Popular",
-    badgeColor: "bg-[#E8F0E9] text-[#5C7260]",
+    badgeColor: "bg-[#F0EAE0] text-[#5C7260]",
     highlight: true,
     price: "From ₹499/hr",
   },
@@ -135,7 +135,7 @@ export const PRICING = [
 ];
 
 export const FEATURED_TESTIMONIAL = {
-  quote: "Bruno walked down the aisle with us — and I didn't worry once. Pawltier made our family complete on the most important day of our lives.",
+  quote: "Bruno walked down the aisle with us — and I didn't worry once. Pawcort made our family complete on the most important day of our lives.",
   author: "Priya Sharma",
   role: "Wedding at The Grand, Mumbai",
   pet: "Bruno — Golden Retriever",
@@ -148,7 +148,7 @@ export const HOME_STORY = {
   title: "Because Your Pet Belongs in",
   titleHighlight: "Your Wedding Story",
   intro:
-    "Your pet isn't a guest list afterthought — they're family. Pawltier was created so couples can include their companions in the ceremony without carrying the stress of managing them on the biggest day of their lives.",
+    "Your pet isn't a guest list afterthought — they're family. Pawcort was created so couples can include their companions in the ceremony without carrying the stress of managing them on the biggest day of their lives.",
   chapters: [
     {
       chapter: "01",
@@ -156,7 +156,7 @@ export const HOME_STORY = {
       body:
         "You've dreamed of this day for years. Your dog has been by your side through it all — and leaving them out feels wrong. You want them there when you say 'I do,' not waiting at home wondering where you went.",
       pullQuote: "He's been with us since the first date. He had to be part of our wedding.",
-      color: "#6B8570",
+      color: "#5C4033",
       image: "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=640&h=480&fit=crop&q=80",
       imageAlt: "Dog waiting patiently at home before a family event",
     },
@@ -164,9 +164,9 @@ export const HOME_STORY = {
       chapter: "02",
       headline: "Zero Stress on Your Big Day",
       body:
-        "Your Pawltier concierge handles walks, water breaks, crowd management, and quiet moments — so you can focus on your vows, your guests, and soaking in every second without a single glance at your phone.",
+        "Your Pawcort concierge handles walks, water breaks, crowd management, and quiet moments — so you can focus on your vows, your guests, and soaking in every second without a single glance at your phone.",
       pullQuote: "I didn't check my phone once during the ceremony. That had never happened before.",
-      color: "#8FA892",
+      color: "#7A5C4D",
       image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=640&h=480&fit=crop&q=80",
       imageAlt: "Pet sitter caring for a happy dog on the couch",
     },
@@ -184,8 +184,8 @@ export const HOME_STORY = {
 };
 
 export const HOME_PROMISE = {
-  eyebrow: "The Pawltier Promise",
-  title: "Care. Love. Companionship — On Your Wedding Day",
+  eyebrow: "The Pawcort Promise",
+  title: "Loved. Included. Celebrated — On Your Wedding Day",
   body:
     "Verified wedding pet concierges. Live updates throughout the day. On-call emergency support. We carry the responsibility so you can be fully present — with your pet right beside you.",
 };
@@ -211,7 +211,7 @@ export const HOW_IT_WORKS_STEPS = [
     bg: "from-blue-50 to-blue-100",
     border: "border-blue-200",
     image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=640&h=400&fit=crop&q=80",
-    imageAlt: "Golden retriever — sharing your pet's details with Pawltier",
+    imageAlt: "Golden retriever — sharing your pet's details with Pawcort",
   },
   {
     step: 3,
@@ -259,7 +259,7 @@ export const HOME_MOMENTS = [
 export const VIDEOS = [
   {
     id: "home-story",
-    title: "See Pawltier in Action",
+    title: "See Pawcort in Action",
     description:
       "Watch how we bring pets into wedding celebrations — calm, cared for, and part of the family story.",
     duration: "0:22",
@@ -272,7 +272,7 @@ export const VIDEOS = [
     id: "how-it-works",
     title: "How Booking Works",
     description:
-      "From choosing your date to meeting your wedding pet concierge — see the full Pawltier experience in under 2 minutes.",
+      "From choosing your date to meeting your wedding pet concierge — see the full Pawcort experience in under 2 minutes.",
     duration: "1:22",
     category: "Explainer",
     emoji: "📋",

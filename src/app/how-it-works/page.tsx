@@ -7,8 +7,8 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import { HOW_IT_WORKS_VIDEO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "How It Works — Pawltier",
-  description: "Book a wedding pet concierge in 4 simple steps. See how Pawltier works.",
+  title: "How It Works — Pawcort",
+  description: "Book a wedding pet concierge in 4 simple steps. See how Pawcort works.",
 };
 
 export default function HowItWorksPage() {
@@ -16,7 +16,7 @@ export default function HowItWorksPage() {
     <PageLayout>
       <PageHero
         badge="Simple Process"
-        title="How Pawltier"
+        title="How Pawcort"
         highlight="Works"
         subtitle="From booking to celebration — we handle your pet's care so you can enjoy every moment."
       />

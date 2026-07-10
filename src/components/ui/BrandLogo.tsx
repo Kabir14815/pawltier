@@ -24,8 +24,8 @@ export default function BrandLogo({
   variant = "light",
 }: BrandLogoProps) {
   const s = sizes[size];
-  const nameColor = variant === "dark" ? "text-white" : "text-[#2D3B32]";
-  const taglineColor = variant === "dark" ? "text-gray-400" : "text-[#6B8570]";
+  const nameColor = variant === "dark" ? "text-white" : "text-[#3D2A22]";
+  const taglineColor = variant === "dark" ? "text-gray-400" : "text-[#5C4033]";
 
   const content = (
     <>

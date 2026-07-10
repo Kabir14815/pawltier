@@ -28,7 +28,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
       className="section-padding bg-white relative overflow-hidden"
     >
       {/* Decorative background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#E8F0E9] rounded-full opacity-40 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F0EAE0] rounded-full opacity-40 blur-3xl pointer-events-none" />
 
       <Container className="relative">
         {!hideHeader && (
@@ -62,7 +62,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
               variants={cardVariants}
               className={`group relative rounded-2xl p-7 card-hover cursor-default transition-all duration-300 flex flex-col h-full ${
                 service.highlight
-                  ? "bg-gradient-to-br from-[#6B8570] to-[#8FA892] text-white shadow-[0_20px_60px_rgba(107,133,112,0.3)]"
+                  ? "bg-gradient-to-br from-[#5C4033] to-[#7A5C4D] text-white shadow-[0_20px_60px_rgba(107,133,112,0.3)]"
                   : "surface-card-muted hover:border-[#D4E4D8]"
               }`}
             >
@@ -90,19 +90,19 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
 
               <h3
                 className={`text-xl font-bold mb-3 heading-display !text-xl ${
-                  service.highlight ? "text-white" : "text-[#2D3B32]"
+                  service.highlight ? "text-white" : "text-[#3D2A22]"
                 }`}
               >
                 {service.title}
               </h3>
               <p
                 className={`text-base leading-relaxed mb-2 flex-1 ${
-                  service.highlight ? "text-[#E8F0E9]" : "text-[#4A5A50]"
+                  service.highlight ? "text-[#F0EAE0]" : "text-[#4A5A50]"
                 }`}
               >
                 {service.description}
               </p>
-              <p className={`text-base font-bold mb-3 ${service.highlight ? "text-white" : "text-[#6B8570]"}`}>
+              <p className={`text-base font-bold mb-3 ${service.highlight ? "text-white" : "text-[#5C4033]"}`}>
                 {service.price}
               </p>
 
@@ -111,7 +111,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
                 className={`inline-flex items-center gap-1.5 text-base font-semibold transition-all duration-200 mt-auto ${
                   service.highlight
                     ? "text-white/90 hover:text-white hover:gap-2.5"
-                    : "text-[#6B8570] hover:gap-2.5"
+                    : "text-[#5C4033] hover:gap-2.5"
                 }`}
               >
                 Book This Service →

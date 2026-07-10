@@ -4,7 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import BookingSection from "@/components/sections/BookingSection";
 
 export const metadata: Metadata = {
-  title: "Book a Wedding Pet Concierge — Pawltier",
+  title: "Book a Wedding Pet Concierge — Pawcort",
   description: "Book a verified pet sitter in 2 minutes. We call you back within 2 hours.",
 };
 

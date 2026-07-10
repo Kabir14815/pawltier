@@ -4,8 +4,8 @@ import PageHero from "@/components/ui/PageHero";
 import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Pawltier",
-  description: "Get in touch with Pawltier. Phone, email, WhatsApp, and contact form.",
+  title: "Contact Us — Pawcort",
+  description: "Get in touch with Pawcort. Phone, email, WhatsApp, and contact form.",
 };
 
 export default function ContactPage() {
