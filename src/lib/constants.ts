@@ -269,11 +269,11 @@ export const VIDEOS = [
     id: "how-it-works",
     title: "How Booking Works",
     description:
-      "From choosing your date to meeting your wedding pet concierge — see the full Pawcort experience in under 2 minutes.",
-    duration: "1:22",
+      "From choosing your date to meeting your wedding pet concierge — see the full Pawcort experience.",
+    duration: "0:15",
     category: "Explainer",
     emoji: "📋",
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
+    src: "/videos/how-it-works.mp4",
     poster: "",
   },
   {
