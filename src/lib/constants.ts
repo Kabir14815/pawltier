@@ -281,10 +281,10 @@ export const VIDEOS = [
     title: "Bruno's Wedding Day",
     description:
       "Priya booked a sitter for her Udaipur wedding. See Bruno's day — walks, cuddles, and hourly updates while she danced.",
-    duration: "2:34",
+    duration: "0:15",
     category: "Customer Story",
     emoji: "💒",
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
+    src: "/videos/bruno-wedding.mp4",
     poster: "",
   },
 ] as const;
